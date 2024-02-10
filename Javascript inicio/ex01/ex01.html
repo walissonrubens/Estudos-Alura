@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        div#container{
+            background-color: rgba(255, 255, 255, 0.397);
+            width: 350px;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Dia da semana</h1>
+    <div id="container">
+        <p>
+            <label for="idia">Qual dia é hoje?</label><br><br>
+            <input type="text" name="dia" id="idia" placeholder="Digite aqui">
+        </p>
+        <div><input type="button" value="Enviar" onclick="Enviar()"></div>
+
+        <div id="res"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
