@@ -1,9 +1,13 @@
+listaNumerosSorteados = []
+let numeroLimite = 10
 let numeroSecreto = gerarNumeroAleatorio()
 let tentativas = 1
 
 function exibirTexto(tag, texto) {
     let campo = document.querySelector(tag)
     campo.innerHTML = texto
+    responsiveVoice.speak(texto, )
+    
 }
 
 exibirTexto('h1', 'Jogo do número secreto')
@@ -31,7 +35,20 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    let quantidadeElementoLista = listaNumerosSorteados.length
+
+    if(quantidadeElementoLista == numeroLimite){
+        listaNumerosSorteados = []
+    }
+
+    if (listaNumerosSorteados.includes(numeroEscolhido)) {
+        return gerarNumeroAleatorio()
+    } else {
+        listaNumerosSorteados.push(numeroEscolhido)
+        console.log(listaNumerosSorteados)
+        return numeroEscolhido
+    }
 }
 
 function limparCampo() {
