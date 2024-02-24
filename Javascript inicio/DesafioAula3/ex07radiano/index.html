@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+	*{
+		padding: 0px;
+		
+	}
+	body{
+		background-color: black;
+		
+	}
+	#container{
+		width: 300px;
+		background-color: white;
+		padding: 55px;
+		margin: auto;
+		border-radius: 10px;	
+	}
+
+    </style>
+</head>
+
+<body> 
+   <div id="container">
+		 <h1>Radiano para graus</h1>
+   <div>
+     <label for="ipi">Informe o valor de &pi;</label>
+     <input type="number" name="pi" id="ipi">
+   </div>
+    </br>
+   <div>
+     <label for="idivisor">Informe o valor divisivel:</label>
+     <input type="number" name="divisor" id="idivisor">
+   </div>
+    </br>
+     <div>
+     <input type="button" onclick="Verificar()" value="Verificar">
+  </div> </br>
+    <div id="res">O resultado aparecera aqui.</div>
+   </div>
+ 
+</body>
+<script src="script.js"></script>
+</html>
